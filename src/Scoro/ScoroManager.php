@@ -3,6 +3,7 @@
 namespace Scoro;
 
 use GuzzleHttp\Client;
+use Scoro\Sdk\Api\ContactsApi;
 use Scoro\Sdk\Configuration;
 use Scoro\Sdk\Api\ProjectsApi;
 use Scoro\Sdk\Api\TasksApi;
@@ -26,5 +27,10 @@ class ScoroManager
     public function tasks(): TasksApi
     {
         return new TasksApi($this->client, $this->config);
+    }
+
+    public function contacts(): ContactsApi
+    {
+        return new ContactsApi($this->client, $this->config);
     }
 }
