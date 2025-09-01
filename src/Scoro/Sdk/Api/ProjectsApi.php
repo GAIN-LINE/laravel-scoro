@@ -25,6 +25,7 @@ class ProjectsApi {
                 'request' => new \stdClass(),
                 'apiKey' => $this->config->getAccessToken(),
                 'company_account_id' => $this->config->getCompanyAccountId(),
+                'page' => $params['page'] ?? 1,
                 "bookmark" => [
                     "bookmark_id" => "111"
                 ]
